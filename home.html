@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet"> 
+  <script src="https://kit.fontawesome.com/54b7cc4636.js" crossorigin="anonymous"></script>
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
+    
+  <title>Online TShirt Store</title>
+</head>
+<style>
+   
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Otomanopee One';
+}
+.container{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(153,153,110,0.5), rgba(153,153,110,0.5)), url(./image/tshirt.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;
+}
+
+/*INSERTED*/
+header {
+    /*background-color: rgb(223, 223, 191);*/
+    color: black;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.sticky {
+    top: 0;
+}
+/* navbar section */
+.navbar {
+    width: 90%;
+    padding: 2rem 1.5rem 1.5rem;
+    
+    margin: 0 auto;  
+}
+.logo {
+    display: inline-block;
+    font-size: 1.7rem;
+    font-family: 'Otomanopee One';
+}
+.icon-toggle {
+    display: none;
+}
+ul li {
+    list-style-type: none;
+}
+ul li a {
+    text-decoration: none;
+    font-family: 'Otomanopee One';
+    color: black;
+    font-size: 1.3rem;
+    padding: 1rem;
+}
+
+ul li a:hover{
+    color: white;
+}
+.list-items {
+    float: right;
+}
+.list-items .items {
+    display: inline-block;
+    margin-left: 3rem;
+}
+.list-items .items:hover {
+    border: 1px solid black;
+    border-radius: .5rem;
+    transition: all ease-in-out;
+}
+.items.active {
+    border: 1px solid black;
+    border-radius: .5rem;
+    color: wheat;
+}
+/*END*/
+
+
+
+.row{
+  display: flex;
+  height: 88%;
+  align-items: center;
+}
+.col{
+ flex-basis: 50%;
+ font-size: 20px;
+ 
+}
+
+.col h1{
+  color:white;
+  font-size: 100px;
+}
+.col p{
+  color: #fff;
+  font-size: 15px;
+  line-height: 17px;
+}
+button{
+  width: 150px;
+  color:#000;
+  font-size: 12px;
+  padding: 8px 0;
+  background: #fff;
+  border: 0;
+  border-radius: 20px;
+  outline: none;
+  margin-top: 30px;
+}
+button a{
+  text-decoration: none;
+  color:black;
+  font-size: 13px;
+}
+
+
+.footer {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   /* background-color: rgba(153,153,110);*/
+    color: black;
+    font-family: 'Otomanopee One';
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 1rem 0;
+    margin: 2rem 0 0;
+    left: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+.footer  a {
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .list-items {
+        position: fixed;
+        height: 50vh;
+        width: 100%;
+        margin-top: 1rem;
+        left: -100%;
+        transition: 0.5s ease-in-out;
+        background-color: rgba(153,153,110);
+        text-align: center;
+     }
+     .list-items .items {
+         float: none;
+         width: 80%;
+         margin: 1.2rem auto;
+     }
+     .icon-toggle {
+         display: block;
+         float: right;
+         /*font-weight: bold;*/
+         margin-top: -.3rem;
+         border: 1px solid black;
+         /*padding: .6rem;*/
+         padding-right: 2rem;
+         padding-left: 2rem;
+         border-radius: 20px;
+         cursor: pointer;
+     }    
+     .active {
+         left: 0;
+     }
+     .icon-toggle:hover {
+         border: 1px solid white;
+         color: white;
+     }
+     .col h1{
+         font-size: 70px;
+     }
+    }
+
+
+
+</style>
+<body>
+  <div class="container">
+    <header class="header">
+        <nav class="navbar" id="header">
+            <div class="logo"><i class='bx bxs-t-shirt'></i>T-shirt</div>
+            <ul class="list-items" id="list-items">
+                <li class="items active"><a href="home.html">Home</a></li>
+                <li class="items"><a href="index.html">Customize t-shirt</a></li>
+                <li class="items"><a href="Product.html">Products</a></li>
+                <li class="items"><a href="contact.html">Contact</a></li>
+                <li class="items"><a href="cart.html"><i class='bx bxs-cart' id="cart"></i></a>
+                    </li>
+            </ul>
+            <div class="icon-toggle" id="icon-toggle"><i class="material-icons" style="font-size:28px;">menu</i></div>
+        </nav>
+    </header>
+    <div class="row">
+      <div class="col">
+    <h1>T-Shirts</h1>
+    <p>Check out custom t-shirts and free t-shirt printing solutions! Make and print custom t-shirts with our simple step by step instructions below.
+    </p>
+    <button type="button"><a href="Product.html">EXPLORE</a></button>
+      </div>
+      </div>
+    </div>
+    </div>
+
+    <section id="contact">
+        <div class="footer">
+            <p>T-shirt &copy; copyright 2021
+                <a href="http://www.facebook.com" target="_blank"><i class='bx bxl-facebook'></i></a>
+                <a href="http://www.instagram.com"><i class='bx bxl-instagram'></i></a>
+                <a href="http://www.twitter.com" target="_blank"><i class='bx bxl-twitter' ></i></a>
+            </p>
+         
+        </div>
+    </section>
+    <script src="home.js"></script>
+</body>
+</html>
